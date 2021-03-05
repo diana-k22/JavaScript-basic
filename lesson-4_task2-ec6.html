@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        // class A {
+        //     constructor(param1) {
+        //         this.param1 = param1;
+        //     }
+
+        //     show() {
+        //         alert(this.param1);
+        //     }
+        // }
+
+        // class B extends A {
+        //     constructor(param1, param2) {
+        //         super(param1);
+        //         this.param2 = param2;
+        //     }
+
+        //     show2() {
+        //         console.log(this.param2);
+        //     }
+        // }
+
+        // let bObj = new B('text1', 'text2');
+        // bObj.show();
+        // bObj.show2();
+        //----------------------------------------
+
+
+    class Post {
+        constructor(author, text, date) {
+            this.author = author;
+            this.text = text;
+            this.date = date;
+        }
+
+        edit() {
+            let text = prompt("Введите текст");
+        }
+    }
+
+    class AttachedPost extends Post {
+        constructor(author, text, date) {
+            super(author, text, date);
+            this.highlighted = false;
+        }
+
+        makeTextHighlighted() {
+            this.highlighted = true;
+        }
+    }
+
+
+    let obj1 = new AttachedPost('john', 'lorem text', "27.08.1998")
+    obj1.edit();
+    obj1.makeTextHighlighted();
+
+
+    </script>
+</body>
+</html>
