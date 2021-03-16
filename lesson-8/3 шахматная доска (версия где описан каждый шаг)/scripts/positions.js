@@ -1,6 +1,7 @@
 let positions = [
     //названия и координаты белых фигур, кроме пешек
     {
+        
         coordCol: 'a',
         coordRow: 1,
         figure: 'rook',
